@@ -4,7 +4,7 @@
   status = 200
 
 [build]
-  command = "cd src && npm run build"
+  command = "cd src && npm ci && npm run build"
   publish = "dist"
 
 [build.environment]

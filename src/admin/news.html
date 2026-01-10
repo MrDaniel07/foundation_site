@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Manage News | Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Hope Foundation</h2>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="admin-nav-link">Dashboard</a>
+                <a href="programs.html" class="admin-nav-link">Programs</a>
+                <a href="impact.html" class="admin-nav-link">Impact Stories</a>
+                <a href="news.html" class="admin-nav-link active">News</a>
+                <a href="messages.html" class="admin-nav-link">Contact Messages</a>
+                <a href="content.html" class="admin-nav-link">Page Content</a>
+                <a href="settings.html" class="admin-nav-link">Settings</a>
+            </nav>
+            <div class="admin-sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary btn-block">Logout</button>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Manage News</h1>
+            </header>
+            
+            <div class="admin-content">
+                <div class="admin-toolbar">
+                    <h2>News Articles</h2>
+                    <button id="addNewsBtn" class="btn btn-primary">Add New Article</button>
+                </div>
+                
+                <div class="admin-section">
+                    <div id="newsList"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Add/Edit News Modal -->
+    <div id="newsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add News Article</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="newsForm" class="admin-form">
+                <input type="hidden" id="newsId">
+                <div class="form-group">
+                    <label for="newsTitle">Article Title *</label>
+                    <input type="text" id="newsTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="newsSummary">Summary *</label>
+                    <textarea id="newsSummary" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="newsDate">Publication Date *</label>
+                    <input type="date" id="newsDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="newsImage">Image URL *</label>
+                    <input type="url" id="newsImage" required placeholder="https://...">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Article</button>
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/news-admin.js"></script>
+</body>
+</html>

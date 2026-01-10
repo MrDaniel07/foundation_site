@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Contact Messages | Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Hope Foundation</h2>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="admin-nav-link">Dashboard</a>
+                <a href="programs.html" class="admin-nav-link">Programs</a>
+                <a href="impact.html" class="admin-nav-link">Impact Stories</a>
+                <a href="news.html" class="admin-nav-link">News</a>
+                <a href="messages.html" class="admin-nav-link active">Contact Messages</a>
+                <a href="content.html" class="admin-nav-link">Page Content</a>
+                <a href="settings.html" class="admin-nav-link">Settings</a>
+            </nav>
+            <div class="admin-sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary btn-block">Logout</button>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Contact Messages</h1>
+            </header>
+            
+            <div class="admin-content">
+                <div class="admin-section">
+                    <div id="messagesList"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/messages-admin.js"></script>
+</body>
+</html>

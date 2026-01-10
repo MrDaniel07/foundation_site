@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Settings | Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Hope Foundation</h2>
+                <p>Admin Panel</p>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="admin-nav-link">Dashboard</a>
+                <a href="programs.html" class="admin-nav-link">Programs</a>
+                <a href="impact.html" class="admin-nav-link">Impact Stories</a>
+                <a href="news.html" class="admin-nav-link">News</a>
+                <a href="messages.html" class="admin-nav-link">Contact Messages</a>
+                <a href="content.html" class="admin-nav-link">Page Content</a>
+                <a href="settings.html" class="admin-nav-link active">Settings</a>
+            </nav>
+            <div class="admin-sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary btn-block">Logout</button>
+            </div>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Settings</h1>
+            </header>
+            
+            <div class="admin-content">
+                <!-- Change Password -->
+                <div class="admin-section">
+                    <h2>Change Password</h2>
+                    <form id="passwordForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" id="confirmPassword" required minlength="6">
+                        </div>
+                        <div id="passwordError" class="error-message"></div>
+                        <div id="passwordSuccess" class="success-message"></div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Account Info -->
+                <div class="admin-section">
+                    <h2>Account Information</h2>
+                    <form id="accountForm" class="admin-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" required>
+                        </div>
+                        <div id="accountError" class="error-message"></div>
+                        <div id="accountSuccess" class="success-message"></div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Update Username</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Data Management -->
+                <div class="admin-section">
+                    <h2>Data Management</h2>
+                    <p>Manage your website data. Use these options with caution.</p>
+                    <div style="margin-top: var(--spacing-lg);">
+                        <button id="exportDataBtn" class="btn btn-secondary" style="margin-right: var(--spacing-md);">Export All Data</button>
+                        <button id="clearDataBtn" class="btn btn-delete">Clear All Content (Keep Defaults)</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/settings-admin.js"></script>
+</body>
+</html>

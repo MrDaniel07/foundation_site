@@ -5,7 +5,7 @@
 
 [build]
   command = "cd src && npm run build"
-  publish = "src/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"

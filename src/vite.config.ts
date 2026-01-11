@@ -9,6 +9,7 @@ export default defineConfig({
       'figma:asset/92e40b2871d1e969f0c8f4d7c135b049c9690ef6.png': path.resolve(__dirname, './assets/92e40b2871d1e969f0c8f4d7c135b049c9690ef6.png'),
     },
   },
+  publicDir: '../public',
   build: {
     outDir: '../dist',
     assetsDir: 'assets',

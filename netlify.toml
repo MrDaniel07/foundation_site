@@ -9,6 +9,24 @@
     Content-Type = "application/xml"
 
 [[redirects]]
+  from = "http://www.princegoodwillfoundation.org/*"
+  to = "https://princegoodwillfoundation.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://princegoodwillfoundation.org/*"
+  to = "https://princegoodwillfoundation.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.princegoodwillfoundation.org/*"
+  to = "https://princegoodwillfoundation.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/robots.txt"
   to = "/robots.txt"
   status = 200

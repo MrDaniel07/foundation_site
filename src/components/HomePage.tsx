@@ -85,6 +85,9 @@ export default function HomePage() {
           <p className="text-xl md:text-2xl mb-8 text-white">
             The Prince Goodwill Foundation is a humanitarian organization committed to advancing healthcare access, educational opportunity, housing stability, and faith-based outreach across underserved communities in Nigeria and the United States.
           </p>
+          <p className="text-lg md:text-xl mb-8 text-white">
+            Founded by Prince Uche Nwakanma, the foundation was established on a clear and unwavering belief: that sustainable change begins with compassion, structured action, and responsible leadership.
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/programs"

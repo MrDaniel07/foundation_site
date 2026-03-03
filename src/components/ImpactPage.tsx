@@ -193,13 +193,13 @@ export default function ImpactPage() {
               <p className="text-xl text-gray-700 italic mb-4">
                 "The Prince Goodwill Foundation gave me hope when I had nowhere to turn. The food and shelter support helped me get back on my feet."
               </p>
-              <div className="text-gray-600 font-semibold">— Sarah, Houston, Texas</div>
+              <div className="text-gray-600 font-semibold">— Sarah James</div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <p className="text-xl text-gray-700 italic mb-4">
                 "After losing my husband, I struggled to afford healthcare. This foundation's medical assistance program was a blessing I'll never forget."
               </p>
-              <div className="text-gray-600 font-semibold">— Jennifer, New York, New York</div>
+              <div className="text-gray-600 font-semibold">— jennifer</div>
             </div>
           </div>
 

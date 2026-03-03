@@ -68,6 +68,9 @@ export default function HomePage() {
         <meta property="twitter:description" content="Empowering communities through healthcare, education, housing support, and Christian evangelism. Founded by Prince Uche Nwakanma." />
       </Helmet>
 
+      {/* Page Title - H1 */}
+      <h1 className="sr-only">Prince Goodwill Foundation</h1>
+
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <div
@@ -79,9 +82,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl mb-6 text-white">
-            Empowering Communities. Transforming Lives.
-          </h1>
+          <h2 className="text-5xl md:text-6xl mb-6 text-white">
+            Empowering Communities and Transforming Lives Across Nigeria
+          </h2>
           <p className="text-xl md:text-2xl mb-8 text-white">
             The Prince Goodwill Foundation is a humanitarian organization committed to advancing healthcare access, educational opportunity, housing stability, and faith-based outreach across underserved communities in Nigeria and the United States.
           </p>
@@ -135,7 +138,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl mb-4 text-gray-900">
-              Our Core Programs
+              Our Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               We operate through focused, impact-driven programs designed to address urgent needs while promoting long-term empowerment.
@@ -193,10 +196,10 @@ export default function HomePage() {
             </div>
             <div>
               <h2 className="text-4xl mb-6 text-gray-900">
-                Leadership with Purpose
+                Meet Our Founder – Prince Uche Nwakanma
               </h2>
               <h3 className="text-2xl mb-4 text-blue-600">
-                Prince Uche Nwakanma
+                Leadership and Vision
               </h3>
               <p className="text-gray-700 mb-4">
                 The vision behind Prince Goodwill Foundation was shaped by the distinguished career and philanthropic commitment of its founder, Prince Uche Nwakanma. A respected legal professional, entrepreneur, and humanitarian, Prince Uche Nwakanma built a career defined by excellence and service. Recognized among the Top 50 Black Lawyers in the United States and having represented more than 6,000 clients across federal courts, his professional journey reflects dedication, discipline, and leadership.
@@ -219,8 +222,9 @@ export default function HomePage() {
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
-            Partner With Us in Creating Lasting Change
+            Partner with Prince Goodwill Foundation
           </h2>
+          <h3 className="text-2xl mb-4 text-white">Get Involved</h3>
           <p className="text-xl mb-8">
             Transformational impact requires collaboration. Whether through donations, volunteer engagement, strategic partnerships, or advocacy, your involvement strengthens our ability to serve communities effectively. Together, we can expand our reach and deepen our impact.
           </p>
@@ -230,6 +234,8 @@ export default function HomePage() {
           >
             Get in Touch
           </Link>
+          <h3 className="text-2xl mt-8 text-white">Contact Information</h3>
+          <p className="text-lg mt-4">Have questions? Reach out to us for more information about partnership opportunities.</p>
         </div>
       </section>
     </PublicLayout>

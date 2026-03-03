@@ -17,10 +17,10 @@ export default function FounderPage() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -36,7 +36,7 @@ export default function FounderPage() {
             },
           }
         );
-        
+
         if (response.ok) {
           const data = await response.json();
           setGallery(data.gallery || []);
@@ -69,7 +69,7 @@ export default function FounderPage() {
     setIsTransitioning(true);
     const increment = isMobile ? 1 : 2;
     setTimeout(() => {
-      setCurrentSlide((prev) => 
+      setCurrentSlide((prev) =>
         prev + increment >= gallery.length ? 0 : prev + increment
       );
       setIsTransitioning(false);
@@ -80,7 +80,7 @@ export default function FounderPage() {
     setIsTransitioning(true);
     const decrement = isMobile ? 1 : 2;
     setTimeout(() => {
-      setCurrentSlide((prev) => 
+      setCurrentSlide((prev) =>
         prev - decrement < 0 ? Math.max(0, gallery.length - decrement) : prev - decrement
       );
       setIsTransitioning(false);
@@ -109,7 +109,7 @@ export default function FounderPage() {
         <meta name="description" content="Learn about Prince Uche Nwakanma, respected attorney, entrepreneur, philanthropist, and humanitarian. Top 50 Black Lawyer in America, former member of President's Business Advisory Council, founder of Prince Goodwill Foundation." />
         <meta name="keywords" content="Prince Uche Nwakanma, Prince Nwakanma, attorney Prince Uche, Prince Goodwill Foundation founder, top black lawyers America, Thurgood Marshall School of Law, Houston attorney, Christian philanthropist, humanitarian leader, business advisory council" />
         <link rel="canonical" href="https://princegoodwillfoundation.org/founder" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://princegoodwillfoundation.org/founder" />
@@ -118,14 +118,14 @@ export default function FounderPage() {
         <meta property="og:image" content={founderImage} />
         <meta property="profile:first_name" content="Prince Uche" />
         <meta property="profile:last_name" content="Nwakanma" />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://princegoodwillfoundation.org/founder" />
         <meta property="twitter:title" content="Prince Uche Nwakanma - Founder & CEO | Prince Goodwill Foundation" />
         <meta property="twitter:description" content="Respected attorney, entrepreneur, philanthropist, and humanitarian. Top 50 Black Lawyer in America and founder of Prince Goodwill Foundation." />
         <meta property="twitter:image" content={founderImage} />
-        
+
         {/* Structured Data - Person Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -165,7 +165,7 @@ export default function FounderPage() {
             ]
           })}
         </script>
-        
+
         {/* Structured Data - BreadcrumbList */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -201,57 +201,189 @@ export default function FounderPage() {
               />
             </div>
             <div>
-              <h1 className="text-5xl mb-4 text-gray-900">Prince Uche Nwakanma</h1>
-              <p className="text-2xl text-blue-600 mb-6">Founder & CEO</p>
-              <p className="text-xl text-gray-700 mb-4">
-                A respected legal professional, entrepreneur, philanthropist, and humanitarian based in the United States.
+              <h1 className="text-5xl mb-2 text-gray-900">Prince Uche Nwakanma</h1>
+              <p className="text-2xl text-blue-600 mb-6">Founder & Chief Executive Officer, Prince Goodwill Foundation</p>
+              <p className="text-lg text-gray-700 mb-4">
+                Prince Uche Nwakanma is a distinguished legal professional, entrepreneur, philanthropist, and humanitarian whose career reflects a lifelong commitment to excellence, service, and transformational leadership. As the founder of the Prince Goodwill Foundation, Prince Uche Nwakanma has dedicated his post-legal career to advancing sustainable humanitarian initiatives across Nigeria and the United States.
               </p>
-              <p className="text-gray-600">
-                Widely recognized for his contributions to the legal profession, business leadership, and charitable initiatives, Prince Uche Nwakanma has become a prominent ambassador of successful lawyers of African descent in the United States.
+              <p className="text-gray-700">
+                Recognized nationally for his legal accomplishments and widely respected for his leadership in business and philanthropy, Prince Uche Nwakanma continues to shape communities through structured giving, strategic outreach, and faith-driven service.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Biography */}
+      {/* Early Life and Academic Foundation */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-gray-900">Biography</h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 mb-4">
-              Prince Uche Nwakanma earned his Bachelor of Science degree in Biology from the University of Houston–Downtown in 1999. Although initially drawn to a career in medicine, his passion for justice and advocacy led him to pursue law. He attended the Thurgood Marshall School of Law from 1999 to 2002, where he distinguished himself academically, successfully transitioning from the sciences to legal studies with outstanding performance.
+          <h2 className="text-4xl mb-8 text-gray-900">Early Life and Academic Foundation</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Prince Uche Nwakanma began his academic journey with a strong interest in the sciences, earning a Bachelor of Science degree in Biology from the University of Houston–Downtown in 1999. Initially inspired by the medical profession, he developed a deep appreciation for analytical reasoning and disciplined study.
             </p>
-            <p className="text-gray-700 mb-4">
-              In 2003, Prince Uche Nwakanma was licensed to practice law by the Supreme Court of Kansas and the Federal Court for the Southern District of Texas. He later gained admission to practice before the United States Court of Appeals for the Fifth Circuit, as well as several other federal courts across the United States. Over the course of his legal career, Prince Uche Nwakanma represented more than 6,000 clients across multiple areas of federal law, earning a reputation for diligence, integrity, and professional excellence.
+            <p className="text-gray-700 text-lg leading-relaxed">
+              However, his passion for justice, advocacy, and social equity ultimately redirected his path toward the legal profession. Prince Uche Nwakanma enrolled at the Thurgood Marshall School of Law in 1999, successfully transitioning from the sciences to law with academic distinction. He earned his Juris Doctor degree in 2002, laying the foundation for what would become a highly accomplished legal career.
             </p>
-            <p className="text-gray-700 mb-4">
-              His work and influence did not go unnoticed. Prince Uche Nwakanma was voted among the Top 50 Black Lawyers in the United States, receiving several awards and recognitions for his contributions to the legal profession and the communities he served. Following his success in law, Prince Uche Nwakanma expanded into business, where he founded, owned, and managed multiple multi-million-dollar enterprises in the United States.
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Career and Professional Distinction */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Legal Career and Professional Distinction</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              In 2003, Prince Uche Nwakanma was licensed to practice law by the Supreme Court of Kansas and the Federal Court for the Southern District of Texas. He later gained admission to the United States Court of Appeals for the Fifth Circuit and several other federal courts throughout the United States.
             </p>
-            <p className="text-gray-700 mb-4">
-              Prince Uche Nwakanma's leadership and business achievements attracted national recognition, leading to his appointment as a member of the President's Business Advisory Council for Texas during the administration of President George W. Bush. This appointment was publicly reported by The Wall Street Journal. He and his wife were also honored with invitations to attend Presidential Dinners at the White House, hosted by President George W. Bush and President Barack Obama.
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Over the course of his legal career, Prince Uche Nwakanma represented more than 6,000 clients across various areas of federal law. His work earned him a reputation for diligence, integrity, and strategic excellence. Through consistent professional performance and ethical practice, he built a respected presence within the legal community.
             </p>
-            <p className="text-gray-700">
-              Beyond his professional accomplishments, Prince Uche Nwakanma is a devoted Christian and humanitarian whose life is guided by faith, gratitude, and service to others. He credits God's grace for the opportunities and renewed purpose that have shaped his journey. Motivated by a deep commitment to humanity, Prince Uche Nwakanma stepped away from active legal practice to focus on business leadership, philanthropy, and evangelism, dedicating his efforts to uplifting individuals and communities through charitable giving and service.
+            <p className="text-gray-700 text-lg leading-relaxed">
+              His contributions were formally recognized when Prince Uche Nwakanma was voted among the Top 50 Black Lawyers in the United States — a distinction reflecting both legal achievement and community influence.
             </p>
-            <p className="text-gray-700 mt-4">
-              Prince Uche Nwakanma is married and blessed with three daughters. His family shares his commitment to faith and service, supporting his philanthropic mission to make a positive impact in communities around the world.
+          </div>
+        </div>
+      </section>
+
+      {/* Business Leadership and National Recognition */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Business Leadership and National Recognition</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Beyond law, Prince Uche Nwakanma expanded into entrepreneurship, founding and managing multiple multi-million-dollar enterprises in the United States. His leadership in business attracted national attention and led to his appointment as a member of the President's Business Advisory Council for Texas during the administration of President George W. Bush.
             </p>
-            
-            {/* External Biography Link */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <p className="text-gray-700">
-                View more about Mr. Prince at{' '}
-                <a 
-                  href="https://www.360naijahits.com.ng/news/the-unprecedented-story-of-attorney-prince-nwakanma/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 underline transition-colors"
-                >
-                  360 Naija Hits
-                </a>
-              </p>
-            </div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              This appointment was publicly reported and further solidified Prince Uche Nwakanma's standing as a respected business and civic leader. He and his wife were also invited to attend Presidential Dinners at the White House under both President George W. Bush and President Barack Obama — an honor reflecting national acknowledgment of professional achievement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision for Service and Establishment of Foundation */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Vision for Service and the Establishment of Prince Goodwill Foundation</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              While his legal and business careers were marked by measurable success, Prince Uche Nwakanma felt a deeper calling toward structured humanitarian service. Motivated by faith, gratitude, and a desire to address systemic challenges affecting vulnerable communities, he established the Prince Goodwill Foundation.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed font-semibold">
+              The founding vision was clear: to create sustainable, accountable programs that empower communities rather than foster dependency.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Prince Uche Nwakanma designed the foundation to focus on four critical pillars:
+            </p>
+            <ul className="list-disc list-inside text-gray-700 text-lg space-y-2">
+              <li>Healthcare outreach</li>
+              <li>Shelter and housing assistance</li>
+              <li>Educational scholarships</li>
+              <li>Faith-based community engagement</li>
+            </ul>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Through these initiatives, Prince Uche Nwakanma sought to combine strategic leadership with compassionate action — ensuring that humanitarian efforts produce long-term, measurable results.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 mt-12">
+            <a href="/programs" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">
+              Explore Our Programs
+            </a>
+            <a href="/impact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">
+              See Our Community Impact
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Philosophy */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Leadership Philosophy</h2>
+          <div className="bg-blue-50 p-8 rounded-lg mb-8">
+            <blockquote className="text-xl text-gray-700 italic mb-4">
+              "True development isn't about what we give to communities — it's about empowering them to unlock their own potential. Sustainable change happens when we listen, collaborate, and support local solutions to local challenges."
+            </blockquote>
+            <p className="text-gray-600 text-right">— Prince Uche Nwakanma</p>
+          </div>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Prince Uche Nwakanma's leadership philosophy centers on empowerment, partnership, and sustainability.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              This philosophy guides the structure of the Prince Goodwill Foundation's initiatives. Rather than delivering temporary relief alone, Prince Uche Nwakanma emphasizes building capacity within communities — strengthening systems that continue functioning long after direct intervention concludes.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              He believes that responsible philanthropy must integrate transparency, measurable outcomes, and community participation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Humanitarian Commitment and Impact */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Humanitarian Commitment and Community Impact</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Under the leadership of Prince Uche Nwakanma, the Prince Goodwill Foundation has impacted tens of thousands of individuals through healthcare missions, scholarship funding, housing assistance, and faith-centered outreach.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              The organization has extended its reach across Nigeria and into collaborative initiatives within the United States, reflecting Prince Uche Nwakanma's commitment to cross-border humanitarian engagement.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Through medical missions, vulnerable populations have received access to essential healthcare services. Through scholarship initiatives, students have been empowered to pursue academic advancement. Through housing assistance programs, families have regained stability and dignity.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Each initiative reflects Prince Uche Nwakanma's belief that structured leadership and compassionate service can produce generational transformation.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 mt-12">
+            <a href="/impact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">
+              Learn More About Our Impact
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Faith, Family, and Personal Commitment */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Faith, Family, and Personal Commitment</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Prince Uche Nwakanma is a devoted Christian whose life is guided by faith, gratitude, and service to humanity. He attributes his professional opportunities and renewed sense of mission to divine grace and remains deeply committed to evangelism and charitable outreach.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Married and blessed with three daughters, Prince Uche Nwakanma values family as a cornerstone of both personal and community stability. His family actively supports his philanthropic mission, reinforcing a shared commitment to faith-driven service and responsible leadership.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Continuing the Mission */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-gray-900">Continuing the Mission</h2>
+          <div className="prose prose-lg max-w-none space-y-4">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Today, Prince Uche Nwakanma continues to provide strategic oversight and visionary leadership to the Prince Goodwill Foundation. His work bridges professional excellence, entrepreneurial experience, and humanitarian dedication.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Through disciplined governance, community partnerships, and measurable program outcomes, Prince Uche Nwakanma remains committed to empowering communities, strengthening families, and expanding access to opportunity.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed font-semibold">
+              The mission continues — guided by purpose, grounded in faith, and executed through structured service.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4 mt-12">
+            <a href="/programs" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">
+              Discover Our Programs
+            </a>
+            <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors inline-block">
+              Partner With Prince Goodwill Foundation
+            </a>
           </div>
         </div>
       </section>
@@ -265,17 +397,16 @@ export default function FounderPage() {
               <p className="text-gray-500 text-lg">No gallery images yet. Add images through the admin panel.</p>
             </div>
           ) : (
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => !isMobile && setIsPaused(true)}
               onMouseLeave={() => !isMobile && setIsPaused(false)}
               onTouchStart={() => isMobile && setIsPaused(true)}
               onTouchEnd={() => isMobile && setIsPaused(false)}
             >
-              <div 
-                className={`grid md:grid-cols-2 gap-8 transition-opacity duration-300 ${
-                  isTransitioning ? 'opacity-0' : 'opacity-100'
-                }`}
+              <div
+                className={`grid md:grid-cols-2 gap-8 transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'
+                  }`}
               >
                 {getCurrentImages().map((image) => (
                   <div key={image.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -314,39 +445,34 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-center text-gray-900">Leadership Philosophy</h2>
-          <div className="bg-blue-50 p-8 rounded-lg">
-            <blockquote className="text-xl text-gray-700 italic mb-6">
-              "True development isn't about what we give to communities—it's about empowering them to unlock their own potential. Sustainable change happens when we listen, collaborate, and support local solutions to local challenges."
-            </blockquote>
-            <p className="text-gray-600 text-right">— Prince Uche</p>
-          </div>
-          <div className="mt-8 prose prose-lg max-w-none">
-            <p className="text-gray-700">
-              Prince's leadership philosophy centers on three core principles: empowerment, partnership, and sustainability. He believes that lasting change requires building capacity within communities, working alongside local leaders, and creating systems that can thrive independently long after external support ends.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Education */}
+      {/* Education Summary */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-center text-gray-900">Education</h2>
+          <h2 className="text-4xl mb-8 text-center text-gray-900">Education & Credentials</h2>
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-2 text-gray-900">Juris Doctor (J.D.)</h3>
+              <h3 className="text-xl mb-2 text-gray-900 font-semibold">Juris Doctor (J.D.)</h3>
               <p className="text-blue-600 mb-2">Thurgood Marshall School of Law</p>
               <p className="text-gray-600">1999 - 2002</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-2 text-gray-900">Bachelor of Science in Biology</h3>
+              <h3 className="text-xl mb-2 text-gray-900 font-semibold">Bachelor of Science in Biology</h3>
               <p className="text-blue-600 mb-2">University of Houston–Downtown</p>
               <p className="text-gray-600">Graduated 1999</p>
             </div>
+          </div>
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <p className="text-gray-700 text-center">
+              For more biographical information, visit{' '}
+              <a
+                href="https://www.360naijahits.com.ng/news/the-unprecedented-story-of-attorney-prince-nwakanma/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-700 underline transition-colors font-semibold"
+              >
+                360 Naija Hits
+              </a>
+            </p>
           </div>
         </div>
       </section>

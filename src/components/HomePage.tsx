@@ -22,7 +22,7 @@ export default function HomePage() {
             },
           }
         );
-        
+
         if (response.ok) {
           const data = await response.json();
           // Display first 3 programs on home page
@@ -54,13 +54,13 @@ export default function HomePage() {
         <meta name="description" content="Prince Goodwill Foundation, founded by Prince Uche Nwakanma, provides healthcare missions, education scholarships, housing support, and Christian evangelism. Empowering communities and transforming lives." />
         <meta name="keywords" content="Prince Goodwill Foundation, Prince Uche Nwakanma, charity, nonprofit, healthcare missions, education scholarships, housing support, Christian evangelism, community development, philanthropy, humanitarian" />
         <link rel="canonical" href="https://princegoodwillfoundation.org/" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princegoodwillfoundation.org/" />
         <meta property="og:title" content="Prince Goodwill Foundation | Founded by Prince Uche Nwakanma" />
         <meta property="og:description" content="Prince Goodwill Foundation provides healthcare missions, education scholarships, housing support, and Christian evangelism. Founded by attorney and philanthropist Prince Uche Nwakanma." />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://princegoodwillfoundation.org/" />
@@ -80,12 +80,10 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl mb-6 text-white">
-            Empowering Communities, Transforming Lives
+            Empowering Communities. Transforming Lives.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white">
-            Founded by Prince Uche Nwakanma, our foundation is
-            dedicated to healthcare missions, housing support, education scholarships,
-            and Christian evangelism to transform lives and strengthen faith communities.
+            The Prince Goodwill Foundation is a humanitarian organization committed to advancing healthcare access, educational opportunity, housing stability, and faith-based outreach across underserved communities in Nigeria and the United States.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
@@ -134,12 +132,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl mb-4 text-gray-900">
-              Our Programs
+              Our Core Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're committed to making a difference in the
-              lives of those who need it most through targeted,
-              impactful programs.
+              We operate through focused, impact-driven programs designed to address urgent needs while promoting long-term empowerment.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -194,29 +190,16 @@ export default function HomePage() {
             </div>
             <div>
               <h2 className="text-4xl mb-6 text-gray-900">
-                Meet Our Founder
+                Leadership with Purpose
               </h2>
               <h3 className="text-2xl mb-4 text-blue-600">
                 Prince Uche Nwakanma
               </h3>
               <p className="text-gray-700 mb-4">
-                Prince Uche Nwakanma is a respected legal
-                professional, entrepreneur, philanthropist, and
-                humanitarian. A prominent ambassador of
-                successful lawyers of African descent in the
-                United States, he was voted among the Top 50
-                Black Lawyers in the country and represented
-                more than 6,000 clients across federal courts.
+                The vision behind Prince Goodwill Foundation was shaped by the distinguished career and philanthropic commitment of its founder, Prince Uche Nwakanma. A respected legal professional, entrepreneur, and humanitarian, Prince Uche Nwakanma built a career defined by excellence and service. Recognized among the Top 50 Black Lawyers in the United States and having represented more than 6,000 clients across federal courts, his professional journey reflects dedication, discipline, and leadership.
               </p>
               <p className="text-gray-700 mb-6">
-                Following his distinguished legal career, Prince
-                Uche Nwakanma founded multiple
-                multi-million-dollar enterprises and served on
-                the President's Business Advisory Council for
-                Texas. Now dedicated to philanthropy and
-                service, he founded the Prince Goodwill Foundation
-                to uplift individuals and communities through
-                charitable giving and humanitarian work.
+                Following his success in law and business, including service on the President's Business Advisory Council for Texas, he expanded his commitment to public service through structured philanthropy. The establishment of Prince Goodwill Foundation marked a new chapter of focused humanitarian outreach, with a mission to uplift communities through healthcare, housing support, education, and faith-centered engagement. Under his leadership, the foundation continues to strengthen partnerships, expand outreach initiatives, and operate with transparency and accountability.
               </p>
               <Link
                 to="/founder"
@@ -233,12 +216,10 @@ export default function HomePage() {
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
-            Join Us in Making a Difference
+            Partner With Us in Creating Lasting Change
           </h2>
           <p className="text-xl mb-8">
-            Your support helps us continue our mission to
-            empower communities and transform lives. Together,
-            we can create lasting change.
+            Transformational impact requires collaboration. Whether through donations, volunteer engagement, strategic partnerships, or advocacy, your involvement strengthens our ability to serve communities effectively. Together, we can expand our reach and deepen our impact.
           </p>
           <Link
             to="/contact"

@@ -234,8 +234,14 @@ export default function HomePage() {
           >
             Get in Touch
           </Link>
-          <h3 className="text-2xl mt-8 text-white">Contact Information</h3>
-          <p className="text-lg mt-4">Have questions? Reach out to us for more information about partnership opportunities.</p>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-2xl text-gray-900">Contact Information</h3>
+          <p className="text-lg mt-4 text-gray-700">Have questions? Reach out to us for more information about partnership opportunities.</p>
         </div>
       </section>
     </PublicLayout>

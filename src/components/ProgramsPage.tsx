@@ -1,138 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PublicLayout from './PublicLayout';
-import { Heart, Home, GraduationCap, Cross, Church, Users } from 'lucide-react';
-import { projectId, publicAnonKey } from '../utils/supabase/info';
 
 export default function ProgramsPage() {
-  const [programs, setPrograms] = useState<any[]>([]);
-
-  // Map icon names to components
-  const iconMap: { [key: string]: any } = {
-    Heart,
-    Home,
-    GraduationCap,
-    Cross,
-    Church,
-    Users,
-  };
-
-  useEffect(() => {
-    // Fetch programs from server
-    const fetchPrograms = async () => {
-      try {
-        const response = await fetch(
-          `https://${projectId}.supabase.co/functions/v1/make-server-b2211b85/programs`,
-          {
-            headers: {
-              'Authorization': `Bearer ${publicAnonKey}`,
-            },
-          }
-        );
-        
-        if (response.ok) {
-          const data = await response.json();
-          
-          // If no programs exist in Supabase, initialize with defaults
-          if (!data.programs || data.programs.length === 0) {
-            const defaultPrograms = getDefaultPrograms();
-            setPrograms(defaultPrograms);
-            
-            // Save defaults to Supabase
-            await fetch(
-              `https://${projectId}.supabase.co/functions/v1/make-server-b2211b85/programs`,
-              {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${publicAnonKey}`,
-                },
-                body: JSON.stringify({ programs: defaultPrograms }),
-              }
-            );
-          } else {
-            setPrograms(data.programs);
-          }
-        } else {
-          console.error('Failed to fetch programs:', await response.text());
-          // Fallback to default programs
-          setPrograms(getDefaultPrograms());
-        }
-      } catch (error) {
-        console.error('Error fetching programs:', error);
-        // Fallback to default programs
-        setPrograms(getDefaultPrograms());
-      }
-    };
-
-    fetchPrograms();
-  }, []);
-
-  const getDefaultPrograms = () => {
-    return [
-      {
-        id: 1,
-        title: 'Healthcare Support',
-        category: 'Health', 
-        description: 'Providing free medical missions and essential medical supplies for vulnerable populations including the homeless in Africa, ensuring access to critical healthcare services.',
-        image: 'https://images.unsplash.com/photo-1627555704146-5c4ffa8149f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbWlzc2lvbiUyMGFmcmljYSUyMGNsaW5pY3xlbnwxfHx8fDE3Njc0ODE1MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '3,500+ patients treated annually',
-        iconName: 'Heart',
-      },
-      {
-        id: 2,
-        title: 'Shelter Assistance',
-        category: 'Housing',
-        description: 'Supporting individuals with housing needs through cash incentives and comprehensive resources to help them find stable, safe living accommodations and rebuild their lives.',
-        image: 'https://images.unsplash.com/photo-1758755791011-0720d654b8d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3VzaW5nJTIwYXNzaXN0YW5jZSUyMHN1cHBvcnR0ZW58MXx8fHwxNjc0ODE1MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '800+ families housed',
-        iconName: 'Home',
-      },
-      {
-        id: 3,
-        title: 'Scholarships & Tuition Support',
-        category: 'Education',
-        description: 'Providing financial support to qualified individuals who need assistance with tuition and education expenses, enabling them to pursue their academic dreams and build better futures.',
-        image: 'https://images.unsplash.com/photo-1604336480714-ed7fa506014e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBzY2hvbGFyc2hpcCUyMHN0dWRlbnR8ZW58MXx8fHwxNjc0ODE1Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '1,200+ students supported',
-        iconName: 'GraduationCap',
-      },
-      {
-        id: 4,
-        title: 'Christian Evangelism',
-        category: 'Faith',
-        description: 'Sponsoring Christian evangelism initiatives and providing spiritual guidance to encourage people to know our Creator and understand His purpose and love for His children.',
-        image: 'https://images.unsplash.com/photo-1714381636560-47bca37b5054?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHJpc3RpYW4lMjB3b3JzaGlwJTIwY2h1cmNofGVufDF8fHx8MTY3NDgxNTI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '50+ evangelism events supported',
-        iconName: 'Cross',
-      },
-      {
-        id: 5,
-        title: 'Church & Ministry Support',
-        category: 'Faith',
-        description: 'Providing financial support to churches and religious organizations to enhance biblical teachings, strengthen ministry outreach, and win souls for God\'s kingdom.',
-        image: 'https://images.unsplash.com/photo-1760319726429-fcda77d3cb05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBjb25ncmVnYXRpb24lMjBjb21tdW5pdHl8ZW58MXx8fHwxNjc0ODE1Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '25+ churches and ministries supported',
-        iconName: 'Church',
-      },
-      {
-        id: 6,
-        title: 'Pastoral Ministry Support',
-        category: 'Faith',
-        description: 'Providing financial incentives to clergy members and pastoral leaders to strengthen their ministries, support gospel advancement, and enable effective spiritual leadership in their communities.',
-        image: 'https://images.unsplash.com/photo-1623081553676-8b658405761a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0b3IlMjBwcmVhY2hpbmclMjBtaW5pc3RyeXxlbnwxfHx8fDE3Njc2NTUzNTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        impact: '40+ pastoral leaders supported',
-        iconName: 'Users',
-      },
-    ];
-  };
-
-  const categories = ['All', ...new Set(programs.map(p => p.category))];
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredPrograms = selectedCategory === 'All' 
-    ? programs 
-    : programs.filter(p => p.category === selectedCategory);
-
   return (
     <PublicLayout>
       {/* Hero Section */}
@@ -146,62 +15,271 @@ export default function ProgramsPage() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl mb-4">Our Programs</h1>
+          <h1 className="text-5xl font-bold mb-4">Our Programs</h1>
           <p className="text-xl text-white">
-            Supporting healthcare, housing, education, and faith-based initiatives to transform lives and communities.
+            Advancing Healthcare, Housing, and Education for Sustainable Community Transformation
           </p>
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  selectedCategory === category
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+      {/* Introduction Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-lg text-gray-700 mb-4">
+            At Prince Goodwill Foundation, our programs are designed to create measurable, lasting change in vulnerable communities across Nigeria and the United States. Guided by structured leadership and long-term strategy, the Foundation focuses on three core pillars: Healthcare Support, Shelter Assistance, and Scholarships & Tuition Support.
+          </p>
+          <p className="text-lg text-gray-700">
+            Each initiative is built around sustainability, accountability, and real-world outcomes; ensuring that every intervention strengthens individuals, families, and communities for the future.
+          </p>
         </div>
       </section>
 
-      {/* Programs Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPrograms.map((program) => {
-              const IconComponent = program.iconName ? iconMap[program.iconName] : null;
-              return (
-                <div key={program.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <img
-                    src={program.image}
-                    alt={program.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      {IconComponent && <IconComponent className="text-blue-600" size={24} />}
-                      <span className="text-sm text-blue-600">{program.category}</span>
-                    </div>
-                    <h3 className="text-2xl mb-3 text-gray-900">{program.title}</h3>
-                    <p className="text-gray-600 mb-4">{program.description}</p>
-                    <div className="text-sm text-gray-500 border-t pt-4">
-                      <strong>Impact:</strong> {program.impact}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+      {/* Healthcare Support */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">Healthcare Support</h2>
+          <h3 className="text-2xl font-semibold text-blue-600 mb-6">Expanding Access to Essential Medical Care</h3>
+
+          <p className="text-lg text-gray-700 mb-6">
+            Access to quality healthcare remains one of the most urgent challenges facing underserved communities. Through its Healthcare Support initiatives, Prince Goodwill Foundation delivers medical outreach programs, supplies essential medications, and supports vulnerable populations; including the homeless and economically disadvantaged families.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Our healthcare programs are designed to address immediate needs while also strengthening local healthcare capacity.
+          </p>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">What We Provide</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Free medical missions in underserved communities</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Distribution of essential medications and medical supplies</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Preventative care screenings</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Community health education initiatives</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Support services for vulnerable and homeless populations</span></li>
+            </ul>
+            <p className="text-gray-700 mt-4">Each year, the Foundation facilitates care for 1,500+ patients, offering services that many recipients would otherwise be unable to access.</p>
           </div>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">Real-World Outcomes</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Reduced untreated illnesses in participating communities</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Early detection of chronic conditions through screening programs</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Improved access to medications for low-income families</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Increased health awareness through education campaigns</span></li>
+            </ul>
+          </div>
+
+          <p className="text-gray-700 mb-4">
+            Rather than temporary intervention alone, our healthcare model promotes continuity of care by collaborating with local healthcare professionals and community leaders.
+          </p>
+          <p className="text-gray-700">
+            To understand the measurable reach of our healthcare missions, visit our <a href="/impact" className="text-blue-600 hover:underline">Impact Page</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* Shelter Assistance */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">Shelter Assistance</h2>
+          <h3 className="text-2xl font-semibold text-blue-600 mb-6">Restoring Stability Through Housing Support</h3>
+
+          <p className="text-lg text-gray-700 mb-6">
+            Housing stability is foundational to economic mobility, mental wellness, and family security. Without safe shelter, families face ongoing barriers to employment, education, and healthcare access.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Prince Goodwill Foundation addresses housing insecurity through direct support and structured assistance programs aimed at helping individuals and families secure stable living accommodations.
+          </p>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">What We Provide</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Financial assistance for housing stabilization</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Emergency shelter support</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Housing transition support for vulnerable families</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Resource coordination for long-term housing solutions</span></li>
+            </ul>
+            <p className="text-gray-700 mt-4">To date, the Foundation has supported 800+ families in securing safe and stable housing.</p>
+          </div>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">Real-World Outcomes</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Families transition from unstable living conditions to permanent housing</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Reduced risk of homelessness among vulnerable populations</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Improved educational continuity for children in supported households</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Enhanced economic stability for beneficiaries</span></li>
+            </ul>
+          </div>
+
+          <p className="text-gray-700 mb-4">
+            Shelter Assistance goes beyond short-term relief. By addressing the root causes of housing instability and working alongside community partners, the Foundation promotes long-term independence and dignity.
+          </p>
+          <p className="text-gray-700">
+            You can explore detailed stories and housing impact data on our <a href="/impact" className="text-blue-600 hover:underline">Impact Page</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* Scholarships & Tuition Support */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">Scholarships & Tuition Support</h2>
+          <h3 className="text-2xl font-semibold text-blue-600 mb-6">Empowering Futures Through Education</h3>
+
+          <p className="text-lg text-gray-700 mb-6">
+            Education is one of the most powerful drivers of generational transformation. Recognizing this, Prince Goodwill Foundation invests in students who demonstrate promise but face financial barriers to academic advancement.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Through scholarships and tuition assistance programs, the Foundation enables qualified individuals to pursue higher education, vocational training, and skill development opportunities.
+          </p>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">What We Provide</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Tuition assistance for eligible students</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Scholarship awards for academic excellence</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Financial support for educational expenses</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Mentorship and encouragement for long-term success</span></li>
+            </ul>
+            <p className="text-gray-700 mt-4">To date, the Foundation has supported 500+ students in achieving their educational goals.</p>
+          </div>
+
+          <div className="mb-8">
+            <h4 className="text-xl font-bold text-gray-900 mb-4">Real-World Outcomes</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Increased access to higher education</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Reduced student financial burden</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Expanded career opportunities for scholarship recipients</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Long-term economic mobility for beneficiaries and their families</span></li>
+            </ul>
+          </div>
+
+          <p className="text-gray-700 mb-4">
+            Scholarship recipients are selected based on merit, need, and demonstrated commitment to community development. By investing in education, the Foundation strengthens not only individuals but the broader communities they serve.
+          </p>
+          <p className="text-gray-700">
+            Learn more about how our education initiatives are transforming lives on our <a href="/impact" className="text-blue-600 hover:underline">Impact Page</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* Faith-Based Outreach */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6 text-gray-900">Faith-Based Outreach</h2>
+          <h3 className="text-2xl font-semibold text-blue-600 mb-6">Supporting Spiritual Growth</h3>
+
+          <p className="text-lg text-gray-700 mb-6">
+            While healthcare, housing, and education remain central pillars, Prince Goodwill Foundation also supports faith-based initiatives that encourage spiritual growth and moral development.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-6">These include:</p>
+          <ul className="space-y-2 text-gray-700 mb-6">
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Christian evangelism outreach programs</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Support for churches and ministry organizations</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Pastoral leadership assistance</span></li>
+          </ul>
+
+          <p className="text-gray-700">
+            Faith-based initiatives complement our humanitarian programs by fostering hope, resilience, and ethical leadership within communities.
+          </p>
+        </div>
+      </section>
+
+      {/* Structured Approach */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-8 text-gray-900">A Structured Approach to Sustainable Impact</h2>
+
+          <p className="text-lg text-gray-700 mb-8">
+            Under the leadership of our founder, the Foundation was intentionally designed to avoid dependency-based models. Instead, each program emphasizes:
+          </p>
+
+          <ul className="space-y-2 text-gray-700 mb-8">
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Community collaboration</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Transparent resource allocation</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Measurable performance outcomes</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Long-term sustainability</span></li>
+          </ul>
+
+          <p className="text-gray-700 mb-4">
+            This structured approach ensures that every dollar invested produces tangible, lasting results.
+          </p>
+          <p className="text-gray-700">
+            To learn more about the vision behind these initiatives, visit our <a href="/founder" className="text-blue-600 hover:underline">Founder Page</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* How Programs Work Together */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-8 text-gray-900">How Our Programs Work Together</h2>
+
+          <p className="text-lg text-gray-700 mb-6">
+            Healthcare, housing, and education are interconnected. A child struggling with illness cannot excel in school. A family without housing stability cannot fully participate in economic opportunity. A student without financial support may never reach their academic potential.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-8">
+            By addressing these areas simultaneously, Prince Goodwill Foundation creates a holistic ecosystem of support.
+          </p>
+
+          <p className="text-lg text-gray-700 mb-4">Our integrated model:</p>
+          <ul className="space-y-2 text-gray-700 mb-8">
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Stabilizes families through housing</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Protects health through medical outreach</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Expands opportunity through education</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Encourages spiritual growth and community cohesion</span></li>
+          </ul>
+
+          <p className="text-gray-700">
+            Together, these programs empower individuals to move from vulnerability to stability; and from stability to leadership.
+          </p>
+        </div>
+      </section>
+
+      {/* Measuring Success */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-8 text-gray-900">Measuring Success</h2>
+
+          <p className="text-lg text-gray-700 mb-6">We evaluate program effectiveness through:</p>
+          <ul className="space-y-2 text-gray-700 mb-8">
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Annual patient treatment metrics</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Housing stabilization data</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Scholarship completion rates</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Community feedback and partnership reports</span></li>
+          </ul>
+
+          <p className="text-gray-700 mb-4">
+            Quantitative data is combined with qualitative impact stories to ensure continuous improvement and responsible stewardship.
+          </p>
+          <p className="text-gray-700">
+            For full statistics and annual performance highlights, explore our <a href="/impact" className="text-blue-600 hover:underline">Impact Page</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Join the Mission</h2>
+
+          <p className="text-lg mb-6">
+            Prince Goodwill Foundation remains committed to expanding its reach and deepening its impact across Nigeria and the United States. Whether through partnerships, donations, volunteer engagement, or advocacy, supporters play a vital role in sustaining these programs.
+          </p>
+
+          <p className="text-lg mb-8">
+            If you would like to contribute or collaborate, visit our <a href="/contact" className="underline hover:text-gray-100">Contact Page</a> or explore opportunities to <a href="/contact" className="underline hover:text-gray-100">Get Involved</a>.
+          </p>
+
+          <p className="text-xl font-semibold">
+            Together, we can continue empowering communities and transforming lives.
+          </p>
         </div>
       </section>
     </PublicLayout>

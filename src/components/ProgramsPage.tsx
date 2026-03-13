@@ -101,7 +101,7 @@ export default function ProgramsPage() {
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Housing transition support for vulnerable families</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Resource coordination for long-term housing solutions</span></li>
             </ul>
-            <p className="text-gray-700 mt-4">To date, the Foundation has supported 800+ families in securing safe and stable housing.</p>
+            <p className="text-gray-700 mt-4">To date, the Foundation has supported 80+ families in securing safe and stable housing.</p>
           </div>
 
           <div className="mb-8">
@@ -144,7 +144,7 @@ export default function ProgramsPage() {
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Financial support for educational expenses</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Mentorship and encouragement for long-term success</span></li>
             </ul>
-            <p className="text-gray-700 mt-4">To date, the Foundation has supported 500+ students in achieving their educational goals.</p>
+            <p className="text-gray-700 mt-4">To date, the Foundation has supported 50+ students in achieving their educational goals.</p>
           </div>
 
           <div className="mb-8">

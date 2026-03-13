@@ -42,9 +42,9 @@ export default function ImpactPage() {
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12">Impact at a Glance</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">6,500+</div>
+              <div className="text-5xl font-bold mb-2">500+</div>
               <div className="text-xl">Lives Impacted</div>
             </div>
             <div className="text-center">
@@ -54,10 +54,6 @@ export default function ImpactPage() {
             <div className="text-center">
               <div className="text-5xl font-bold mb-2">5</div>
               <div className="text-xl">Active Core Programs</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">25+</div>
-              <div className="text-xl">Partner Organizations</div>
             </div>
           </div>
           <p className="text-center text-lg mt-8">

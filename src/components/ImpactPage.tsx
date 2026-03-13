@@ -73,7 +73,7 @@ export default function ImpactPage() {
           <h3 className="text-2xl font-semibold text-blue-600 mb-6">Restoring Health, Restoring Dignity</h3>
 
           <p className="text-lg text-gray-700 mb-6">
-            Access to healthcare remains a major barrier for vulnerable populations. In 2024, our medical mission in Nigeria provided free medical care and essential supplies to over 2,500 individuals, including homeless and underserved families in rural communities.
+            Access to healthcare remains a major barrier for vulnerable populations. In 2024, our medical mission in Nigeria provided free medical care and essential supplies to individuals, including homeless and underserved families in rural communities.
           </p>
 
           <p className="text-lg text-gray-700 mb-8">
@@ -106,7 +106,7 @@ export default function ImpactPage() {
           <h3 className="text-2xl font-semibold text-blue-600 mb-6">Stability for Families in Crisis</h3>
 
           <p className="text-lg text-gray-700 mb-6">
-            In Houston, Texas, our Shelter Assistance program supported 150 families in 2024 through direct financial support and resource coordination.
+            Our Shelter Assistance program supported 150 families in 2024 through direct financial support and resource coordination.
           </p>
 
           <p className="text-lg text-gray-700 mb-8">
@@ -139,7 +139,7 @@ export default function ImpactPage() {
           <h3 className="text-2xl font-semibold text-blue-600 mb-6">Unlocking Academic Potential</h3>
 
           <p className="text-lg text-gray-700 mb-6">
-            Education is a generational investment. In 2024, Prince Goodwill Foundation provided tuition assistance to 85 deserving students across multiple U.S. states. Overall, more than 500 students have received scholarship support through our initiatives.
+            Education is a generational investment. Prince Goodwill Foundation provided tuition assistance to 150 deserving students through our initiatives.
           </p>
 
           <p className="text-lg text-gray-700 mb-8">
@@ -173,7 +173,7 @@ export default function ImpactPage() {
           </p>
 
           <p className="text-lg text-gray-700 mb-6">
-            In 2023, our evangelism initiatives reached over 5,000 individuals in Kenya and other regions. We also provided structured support to 12 churches and ministries, enhancing community outreach and leadership development.
+            In 2023, our evangelism initiatives reached over 1,000 individuals in Nigeria and other regions. We also provided structured support to 12 churches and ministries, enhancing community outreach and leadership development.
           </p>
 
           <p className="text-gray-700">
@@ -215,15 +215,11 @@ export default function ImpactPage() {
           <h2 className="text-4xl font-bold mb-8 text-gray-900">Multi-Continent Reach, Unified Mission</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            Prince Goodwill Foundation operates across Africa and the United States with a unified focus on sustainable transformation.
+            Prince Goodwill Foundation advances sustainable transformation across Africa with support and engagement from the United States.
           </p>
 
           <p className="text-lg text-gray-700 mb-6">
-            Our work is strengthened through partnerships with local leaders, healthcare professionals, educators, churches, and community organizations. With 25+ partner organizations, we ensure that programs are culturally informed, efficiently delivered, and locally sustainable.
-          </p>
-
-          <p className="text-gray-700">
-            By working collaboratively, we maximize resources while minimizing duplication of effort.
+            Our work is strengthened through partnerships with local leaders, healthcare professionals, educators, and churches.
           </p>
         </div>
       </section>

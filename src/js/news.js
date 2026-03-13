@@ -3,7 +3,7 @@ const newsData = [
     {
         id: 1,
         title: 'Hope Foundation Launches New Education Initiative in Tanzania',
-        summary: 'Sarah Mitchell announces expansion of education programs to serve 5,000 additional students across Tanzania. The program includes teacher training, library development, and scholarship opportunities.',
+        summary: 'Sarah Mitchell announces expansion of education programs to serve 5,000 additional students across Tanzania. The program includes teacher training, library development, and tuition assistance opportunities.',
         date: '2025-01-15',
         image: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2NzEyMjY0MHww&ixlib=rb-4.1.0&q=80&w=1080',
         visible: true,
@@ -76,14 +76,14 @@ function formatDate(dateString) {
 function renderNews() {
     const news = initializeNews();
     const newsGrid = document.getElementById('newsGrid');
-    
+
     if (!newsGrid) return;
-    
+
     // Filter visible news and sort by date (newest first)
     const visibleNews = news
         .filter(n => n.visible)
         .sort((a, b) => new Date(b.date) - new Date(a.date));
-    
+
     newsGrid.innerHTML = visibleNews.map(article => `
         <div class="news-card">
             <img src="${article.image}" alt="${article.title}">

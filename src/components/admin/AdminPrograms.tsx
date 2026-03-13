@@ -30,7 +30,7 @@ export default function AdminPrograms() {
           },
         }
       );
-      
+
       if (response.ok) {
         const data = await response.json();
         setPrograms(data.programs || []);
@@ -55,7 +55,7 @@ export default function AdminPrograms() {
           body: JSON.stringify({ programs: updatedPrograms }),
         }
       );
-      
+
       if (!response.ok) {
         console.error('Failed to save programs:', await response.text());
       }
@@ -66,10 +66,10 @@ export default function AdminPrograms() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     let updatedPrograms;
     if (editingProgram) {
-      updatedPrograms = programs.map(p => 
+      updatedPrograms = programs.map(p =>
         p.id === editingProgram.id ? { ...formData, id: p.id } : p
       );
     } else {
@@ -137,7 +137,7 @@ export default function AdminPrograms() {
         {
           id: 1,
           title: 'Healthcare Support',
-          category: 'Health', 
+          category: 'Health',
           description: 'Providing free medical missions and essential medical supplies for vulnerable populations including the homeless in Africa, ensuring access to critical healthcare services.',
           image: 'https://images.unsplash.com/photo-1627555704146-5c4ffa8149f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbWlzc2lvbiUyMGFmcmljYSUyMGNsaW5pY3xlbnwxfHx8fDE3Njc0ODE1MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
           impact: '3,500+ patients treated annually',
@@ -154,7 +154,7 @@ export default function AdminPrograms() {
         },
         {
           id: 3,
-          title: 'Scholarships & Tuition Support',
+          title: 'Tuition Assistance Support',
           category: 'Education',
           description: 'Providing financial support to qualified individuals who need assistance with tuition and education expenses, enabling them to pursue their academic dreams and build better futures.',
           image: 'https://images.unsplash.com/photo-1604336480714-ed7fa506014e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBzY2hvbGFyc2hpcCUyMHN0dWRlbnR8ZW58MXx8fHwxNzY3NDgxNTI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',

@@ -51,15 +51,15 @@ export default function HomePage() {
         {/* Primary Meta Tags */}
         <title>Prince Goodwill Foundation | Founded by Prince Uche Nwakanma</title>
         <meta name="title" content="Prince Goodwill Foundation | Founded by Prince Uche Nwakanma" />
-        <meta name="description" content="Prince Goodwill Foundation, founded by Prince Uche Nwakanma, provides healthcare missions, education scholarships, housing support, and Christian evangelism. Empowering communities and transforming lives." />
-        <meta name="keywords" content="Prince Goodwill Foundation, Prince Uche Nwakanma, charity, nonprofit, healthcare missions, education scholarships, housing support, Christian evangelism, community development, philanthropy, humanitarian" />
+        <meta name="description" content="Prince Goodwill Foundation, founded by Prince Uche Nwakanma, provides healthcare missions, tuition assistance, housing support, and Christian evangelism. Empowering communities and transforming lives." />
+        <meta name="keywords" content="Prince Goodwill Foundation, Prince Uche Nwakanma, charity, nonprofit, healthcare missions, tuition assistance, housing support, Christian evangelism, community development, philanthropy, humanitarian" />
         <link rel="canonical" href="https://princegoodwillfoundation.org/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://princegoodwillfoundation.org/" />
         <meta property="og:title" content="Prince Goodwill Foundation | Founded by Prince Uche Nwakanma" />
-        <meta property="og:description" content="Prince Goodwill Foundation provides healthcare missions, education scholarships, housing support, and Christian evangelism. Founded by attorney and philanthropist Prince Uche Nwakanma." />
+        <meta property="og:description" content="Prince Goodwill Foundation provides healthcare missions, tuition assistance, housing support, and Christian evangelism. Founded by attorney and philanthropist Prince Uche Nwakanma." />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />

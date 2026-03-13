@@ -3,7 +3,7 @@ const programsData = [
     {
         id: 1,
         title: 'Education Access Program',
-        description: 'Providing quality education resources, scholarships, and teacher training to underserved communities. We work with local schools to improve learning outcomes and ensure every child has access to the tools they need to succeed.',
+        description: 'Providing quality education resources, tuition assistance, and teacher training to underserved communities. We work with local schools to improve learning outcomes and ensure every child has access to the tools they need to succeed.',
         image: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc2NzEyMjY0MHww&ixlib=rb-4.1.0&q=80&w=1080',
         visible: true,
         order: 1
@@ -64,14 +64,14 @@ function initializePrograms() {
 function renderPrograms() {
     const programs = initializePrograms();
     const programsGrid = document.getElementById('programsGrid');
-    
+
     if (!programsGrid) return;
-    
+
     // Filter visible programs and sort by order
     const visiblePrograms = programs
         .filter(p => p.visible)
         .sort((a, b) => a.order - b.order);
-    
+
     programsGrid.innerHTML = visiblePrograms.map(program => `
         <div class="program-card">
             <img src="${program.image}" alt="${program.title}">

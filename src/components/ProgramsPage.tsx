@@ -26,7 +26,7 @@ export default function ProgramsPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-gray-700 mb-4">
-            At Prince Goodwill Foundation, our programs are designed to create measurable, lasting change in vulnerable communities across Nigeria and the United States. Guided by structured leadership and long-term strategy, the Foundation focuses on three core pillars: Healthcare Support, Shelter Assistance, and Scholarships & Tuition Support.
+            At Prince Goodwill Foundation, our programs are designed to create measurable, lasting change in vulnerable communities across Nigeria while engaging partners and supporters in the United States.
           </p>
           <p className="text-lg text-gray-700">
             Each initiative is built around sustainability, accountability, and real-world outcomes; ensuring that every intervention strengthens individuals, families, and communities for the future.
@@ -123,10 +123,10 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Scholarships & Tuition Support */}
+      {/* Tuition Assistance Support */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-2 text-gray-900">Scholarships & Tuition Support</h2>
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">Tuition Assistance Support</h2>
           <h3 className="text-2xl font-semibold text-blue-600 mb-6">Empowering Futures Through Education</h3>
 
           <p className="text-lg text-gray-700 mb-6">
@@ -134,14 +134,13 @@ export default function ProgramsPage() {
           </p>
 
           <p className="text-lg text-gray-700 mb-8">
-            Through scholarships and tuition assistance programs, the Foundation enables qualified individuals to pursue higher education, vocational training, and skill development opportunities.
+            Through tuition assistance programs, the Foundation enables qualified individuals to pursue higher education, vocational training, and skill development opportunities.
           </p>
 
           <div className="mb-8">
             <h4 className="text-xl font-bold text-gray-900 mb-4">What We Provide</h4>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Tuition assistance for eligible students</span></li>
-              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Scholarship awards for academic excellence</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Financial support for educational expenses</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Mentorship and encouragement for long-term success</span></li>
             </ul>
@@ -153,13 +152,13 @@ export default function ProgramsPage() {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Increased access to higher education</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Reduced student financial burden</span></li>
-              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Expanded career opportunities for scholarship recipients</span></li>
+              <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Expanded career opportunities for tuition assistance recipients</span></li>
               <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Long-term economic mobility for beneficiaries and their families</span></li>
             </ul>
           </div>
 
           <p className="text-gray-700 mb-4">
-            Scholarship recipients are selected based on merit, need, and demonstrated commitment to community development. By investing in education, the Foundation strengthens not only individuals but the broader communities they serve.
+            Tuition assistance recipients are selected based on merit, need, and demonstrated commitment to community development. By investing in education, the Foundation strengthens not only individuals but the broader communities they serve.
           </p>
           <p className="text-gray-700">
             Learn more about how our education initiatives are transforming lives on our <a href="/impact" className="text-blue-600 hover:underline">Impact Page</a>.
@@ -251,7 +250,7 @@ export default function ProgramsPage() {
           <ul className="space-y-2 text-gray-700 mb-8">
             <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Annual patient treatment metrics</span></li>
             <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Housing stabilization data</span></li>
-            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Scholarship completion rates</span></li>
+            <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Tuition assistance completion rates</span></li>
             <li className="flex items-start"><span className="text-blue-600 mr-3">•</span> <span>Community feedback and partnership reports</span></li>
           </ul>
 

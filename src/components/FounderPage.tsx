@@ -157,7 +157,7 @@ export default function FounderPage() {
               "Top 50 Black Lawyers in the United States",
               "Member of President's Business Advisory Council for Texas"
             ],
-            "description": "Respected legal professional, entrepreneur, philanthropist, and humanitarian. Former member of President's Business Advisory Council for Texas under President George W. Bush. Represented over 6,000 clients in federal law. Founder of Prince Goodwill Foundation dedicated to healthcare missions, education scholarships, housing support, and Christian evangelism.",
+            "description": "Respected legal professional, entrepreneur, philanthropist, and humanitarian. Former member of President's Business Advisory Council for Texas under President George W. Bush. Represented over 6,000 clients in federal law. Founder of Prince Goodwill Foundation dedicated to healthcare missions, tuition assistance, housing support, and Christian evangelism.",
             "nationality": "American",
             "knowsAbout": ["Law", "Business Leadership", "Philanthropy", "Christian Evangelism", "Community Development", "Healthcare Missions", "Education"],
             "sameAs": [
@@ -279,7 +279,7 @@ export default function FounderPage() {
             <ul className="list-disc list-inside text-gray-700 text-lg space-y-2">
               <li>Healthcare outreach</li>
               <li>Shelter and housing assistance</li>
-              <li>Educational scholarships</li>
+              <li>Tuition assistance</li>
               <li>Faith-based community engagement</li>
             </ul>
             <p className="text-gray-700 text-lg leading-relaxed">
@@ -327,13 +327,13 @@ export default function FounderPage() {
           <h2 className="text-4xl mb-8 text-gray-900">Humanitarian Commitment and Community Impact</h2>
           <div className="prose prose-lg max-w-none space-y-4">
             <p className="text-gray-700 text-lg leading-relaxed">
-              Under the leadership of Prince Uche Nwakanma, the Prince Goodwill Foundation has impacted tens of thousands of individuals through healthcare missions, scholarship funding, housing assistance, and faith-centered outreach.
+              Under the leadership of Prince Uche Nwakanma, the Prince Goodwill Foundation has impacted tens of thousands of individuals through healthcare missions, tuition assistance funding, housing assistance, and faith-centered outreach.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
               The organization has extended its reach across Nigeria and into collaborative initiatives within the United States, reflecting Prince Uche Nwakanma's commitment to cross-border humanitarian engagement.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Through medical missions, vulnerable populations have received access to essential healthcare services. Through scholarship initiatives, students have been empowered to pursue academic advancement. Through housing assistance programs, families have regained stability and dignity.
+              Through medical missions, vulnerable populations have received access to essential healthcare services. Through tuition assistance initiatives, students have been empowered to pursue academic advancement. Through housing assistance programs, families have regained stability and dignity.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
               Each initiative reflects Prince Uche Nwakanma's belief that structured leadership and compassionate service can produce generational transformation.

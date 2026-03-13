@@ -150,7 +150,7 @@ export default function AboutPage() {
               The Prince Goodwill Foundation was established in 2004 with a simple but powerful objective: to create structured, sustainable change in communities facing significant socioeconomic challenges.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              What began as a grassroots initiative has grown into a multi-regional humanitarian organization serving thousands of individuals across Nigeria and beyond. Over the past two decades, the foundation has implemented programs that improve healthcare access, provide scholarship opportunities, assist families with housing stability, and promote faith-centered community engagement.
+              What began as a grassroots initiative has grown into a multi-regional humanitarian organization serving thousands of individuals across Nigeria and beyond. Over the past two decades, the foundation has implemented programs that improve healthcare access, provide tuition assistance opportunities, assist families with housing stability, and promote faith-centered community engagement.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
               The inspiration behind the foundation came from firsthand exposure to the systemic challenges affecting vulnerable populations. Recognizing that sustainable transformation requires more than isolated interventions, the organization adopted a holistic model — one that integrates healthcare, education, housing, and community support into a unified strategy for empowerment.

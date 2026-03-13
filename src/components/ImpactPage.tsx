@@ -30,7 +30,7 @@ export default function ImpactPage() {
             At Prince Goodwill Foundation, impact is not measured by intention alone; it is measured by lives changed, communities strengthened, and sustainable systems built for the future.
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            From healthcare missions in rural Africa to housing stabilization in major U.S. cities, our work reflects a structured, accountable approach to nonprofit leadership. Every program is designed with measurable outcomes, transparent reporting, and community collaboration at its core.
+            From healthcare missions in rural Africa to collaborative housing support initiatives connected to U.S. communities, our work reflects a structured and accountable approach to nonprofit leadership.
           </p>
           <p className="text-lg text-gray-700">
             To understand how we deliver these results, visit our <a href="/programs" className="text-blue-600 hover:underline">Programs Page</a>.
@@ -128,10 +128,10 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* Education & Scholarship Advancement */}
+      {/* Education & Tuition Assistance Advancement */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-2 text-gray-900">Education & Scholarship Advancement</h2>
+          <h2 className="text-4xl font-bold mb-2 text-gray-900">Education & Tuition Assistance Advancement</h2>
           <h3 className="text-2xl font-semibold text-blue-600 mb-6">Unlocking Academic Potential</h3>
 
           <p className="text-lg text-gray-700 mb-6">
@@ -139,7 +139,7 @@ export default function ImpactPage() {
           </p>
 
           <p className="text-lg text-gray-700 mb-8">
-            Scholarship recipients demonstrate academic promise and financial need. By reducing tuition burdens, we allow students to focus on learning, career preparation, and community contribution.
+            Tuition assistance recipients demonstrate academic promise and financial need. By reducing tuition burdens, we allow students to focus on learning, career preparation, and community contribution.
           </p>
 
           <div className="mb-8">

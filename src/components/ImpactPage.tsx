@@ -44,7 +44,7 @@ export default function ImpactPage() {
           <h2 className="text-4xl font-bold text-center mb-12">Impact at a Glance</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold mb-2">500+</div>
+              <div className="text-5xl font-bold mb-2">1500+</div>
               <div className="text-xl">Lives Impacted</div>
             </div>
             <div className="text-center">

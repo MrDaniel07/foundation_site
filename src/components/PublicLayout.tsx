@@ -33,9 +33,9 @@ export default function PublicLayout({
                 <span className="text-white">PU</span>
               </div>
               <div className="flex flex-col justify-center">
-                <h1 className="text-xl text-grey">
+                <div className="text-xl text-grey">
                   Prince Goodwill Foundation
-                </h1>
+                </div>
                 <p className="text-xs text-grey">
                   Empowering Communities, Transforming Lives
                 </p>
@@ -48,11 +48,10 @@ export default function PublicLayout({
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`transition-colors ${
-                    location.pathname === link.path
+                  className={`transition-colors ${location.pathname === link.path
                       ? "text-blue-600"
                       : "text-gray-700 hover:text-blue-600"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -86,11 +85,10 @@ export default function PublicLayout({
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`transition-colors ${
-                    location.pathname === link.path
+                  className={`transition-colors ${location.pathname === link.path
                       ? "text-blue-600"
                       : "text-gray-700 hover:text-blue-600"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>

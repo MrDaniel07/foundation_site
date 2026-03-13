@@ -86,7 +86,7 @@ export default function HomePage() {
             Empowering Communities and Transforming Lives Across Nigeria
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-white">
-            The Prince Goodwill Foundation is a humanitarian organization committed to advancing healthcare access, educational opportunity, housing stability, and faith-based outreach across underserved communities in Nigeria and the United States.
+            The Prince Goodwill Foundation is a humanitarian organization advancing healthcare access, education, housing stability, and faith-based outreach in underserved communities in Nigeria and through outreach initiatives in the United States and beyond.
           </p>
           <p className="text-lg md:text-xl mb-8 text-white">
             Founded by Prince Uche Nwakanma, the foundation was established on a clear and unwavering belief: that sustainable change begins with compassion, structured action, and responsible leadership.
